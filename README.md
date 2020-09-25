@@ -38,3 +38,6 @@ The output values can be used inside the workflow step like
         run: echo "The time was ${{ steps.hello.outputs.time }}"
 ```
 When an action is in a private repository, the action can only be used in workflows in the same repository. Public actions can be used by workflows in any repository. You can publish an action out to public.
+
+## Rules to publish an action
+https://github.community/t/unable-to-publish-github-action-to-github-marketplace/16927/2
