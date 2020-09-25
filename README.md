@@ -1,4 +1,4 @@
-# Hello world JavaScript action
+# Hello world JavaScript Github Action
 
 This action prints "Hello World" or "Hello" + the name of a person to greet to the log. To learn how this action was built, see "[Creating a JavaScript action](https://help.github.com/en/articles/creating-a-javascript-action)" in the GitHub Help documentation.
 
@@ -23,12 +23,12 @@ with:
 ```
 
 
-## My personal notes
+# PERSONAL NOTE 
 The private action is calling index.js to do the actual work. It reads the input param using
 ```
 core.getInput('who-to-greet')
 ```
-do the work and pass over the output values using
+, then do the work and pass over the output values using
 ```
 core.setOutput("time", time)
 ```
