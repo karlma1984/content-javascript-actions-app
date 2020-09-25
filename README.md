@@ -21,3 +21,20 @@ uses: actions/hello-world-javascript-action@master
 with:
   who-to-greet: 'Mona the Octocat'
 ```
+
+
+## My personal notes
+The private action is calling index.js to do the actual work. It reads the input param using
+```
+core.getInput('who-to-greet')
+```
+do the work and pass over the output values using
+```
+core.setOutput("time", time)
+```
+The output values can be used inside the workflow step like 
+```
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
+```
+When an action is in a private repository, the action can only be used in workflows in the same repository. Public actions can be used by workflows in any repository. You can publish an action out to public.
